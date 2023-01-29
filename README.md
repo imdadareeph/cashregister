@@ -1,6 +1,6 @@
 # cashregister
 
-####Cash Register System that returns the change value 
+### Cash Register System that returns the change value 
 
 This system would support any kind of currency but limited to following contraints
 * Customer purchase currency shall get change in the same currency
@@ -11,7 +11,7 @@ This system would support any kind of currency but limited to following contrain
     * Sample 2 if purchase price (PP) is $20.03 and cach paid (CH) is $50  then cash returned is highest order of denomination will be
          * TWENTY,FIVE,TWO,TWO,HALFDOLLAR,QUARTER,DIME,DIME,PENNY
 
-###Facts:
+### Facts:
 * This system doesn't take care of denomination where same number exists for a coin and Notes
     * Example : A country may have a coin of 1 value and a paper note for same 1 value.
     * This System will always take paper notes precedence over coins.
