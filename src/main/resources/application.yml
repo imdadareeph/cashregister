@@ -1,0 +1,100 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  datasource:
+    url: jdbc:h2:mem:cashregister
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+
+services:
+  cashregister:
+    currencies:
+      -
+        name: USD
+        country-code: USA
+        precision: 2
+        denominations:
+          -
+            name : PENNY
+            value: 0.01
+          -
+            name : NICKEL
+            value: 0.05
+          -
+            name : DIME
+            value: 0.01
+          -
+            name : QUARTER
+            value: 0.05
+          -
+            name : HALFDOLLAR
+            value: 0.01
+          -
+            name : ONE
+            value: 0.05
+          -
+            name : TWO
+            value: 0.01
+          -
+            name : FIVE
+            value: 0.05
+          -
+            name : TEN
+            value: 0.01
+          -
+            name : TWENTY
+            value: 0.05
+          -
+            name : FIFTY
+            value: 0.01
+          -
+            name : ONEHUNDRED
+            value: 0.05
+
+      -
+        name: INR
+        country-code: IND
+        precision: 2
+        denominations:
+          -
+            name : TWO_THOUSAND_RUPEES
+            value: 2000.00
+          -
+            name : FIVE_HUNDRED_RUPEES
+            value: 500.00
+          -
+            name : TWO_HUNDRED_RUPEES
+            value: 200.00
+          -
+            name : ONE_HUNDRED_RUPEES
+            value: 100.00
+          -
+            name : FIFTY_RUPEES
+            value: 50.00
+          -
+            name : TWENTY_RUPEES
+            value: 20.00
+          -
+            name : TEN_RUPEES
+            value: 10.00
+          -
+            name : FIVE_RUPEES
+            value: 5.00
+          -
+            name : ONE_RUPEES
+            value: 1.00
