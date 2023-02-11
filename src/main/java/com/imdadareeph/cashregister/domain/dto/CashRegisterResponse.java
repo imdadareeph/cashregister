@@ -1,7 +1,9 @@
 package com.imdadareeph.cashregister.domain.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.*;
 
+import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -9,9 +11,11 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
 public class CashRegisterResponse {
 
-    private String countryCode;
-    Map<String, String> change;
-    CashRegisterError cashRegisterError;
+    private String currency;
+    private Map<String, String> change;
+    private String currencyDenominations;
+    private CashRegisterError cashRegisterError;
 }

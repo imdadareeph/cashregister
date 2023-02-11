@@ -1,7 +1,6 @@
 package com.imdadareeph.cashregister.domain.configs;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -14,10 +13,13 @@ import java.util.Map;
 @ConfigurationProperties(prefix = "currencies")
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Currencies {
-    private String name;
-    private String countryCode;
-    private String precision;
-    private List<Map<String, String>> denominations;
+    public String name;
+    public String countryCode;
+    public String precision;
+    public Map<String, String> denominations;
 
 }

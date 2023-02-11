@@ -10,4 +10,5 @@ import lombok.*;
 public class CashRegisterError {
     private String errorCode;
     private String errorMessage;
+    private String rootCause;
 }
